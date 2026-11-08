@@ -1,3 +1,6 @@
+from customer import Customer
+
+
 class Bank:
     def __init__(self, bank_name):
         self.bank_name = bank_name
@@ -21,8 +24,12 @@ class Bank:
         print("These are the list of the people in the customer database")
         #for i in range (len(self.customers)):
         #    print(f"{self.customers[i].}")
+        acc = 1
         for customer in self.customers:
-            print(customer.name)
+            #print(f"Name: {customer.name} \nCustomer ID: {customer.customer_id} \nCustomer Email: {customer.email} \nNumber of Accounts: {len(customer.accounts)}")
+            print(f"Customer {acc}")
+            print(customer.get_customer_info())
+            acc +=1
 
     def generate_bank_report(self):
         print(f"At {self.bank_name} we have the following individuals currently registered: ")
