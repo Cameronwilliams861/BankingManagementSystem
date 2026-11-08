@@ -1,3 +1,6 @@
+import account
+
+
 class Customer:
     def __init__(self, name, customer_id, email):
         self.name = name
@@ -9,6 +12,7 @@ class Customer:
         self.accounts.append(account)
     def get_customer_info(self):
         print(f"Name: {self.name}\nCustomer ID: {self.customer_id}\nEmail: {self.email}")
+        #print(self.get_accounts())
     def get_accounts(self):
-        for account in self.accounts:
-            print(account)
+        for accounts in self.accounts:
+            print(accounts)
