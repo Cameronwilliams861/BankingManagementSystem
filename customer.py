@@ -6,8 +6,9 @@ class Customer:
         self.accounts = []
 
     def add_account(self,account):
-        pass
+        self.accounts.append(account)
     def get_customer_info(self):
-        pass
+        print(f"Name: {self.name}, Customer ID: {self.customer_id}, Email: {self.email}")
     def get_accounts(self):
-        pass
+        for account in self.accounts:
+            print(account)
